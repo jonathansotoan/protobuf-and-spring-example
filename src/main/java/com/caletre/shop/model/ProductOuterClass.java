@@ -34,6 +34,20 @@ public final class ProductOuterClass {
      */
     com.google.protobuf.ByteString
         getNameBytes();
+
+    /**
+     * <code>optional string price = 3;</code>
+     */
+    boolean hasPrice();
+    /**
+     * <code>optional string price = 3;</code>
+     */
+    java.lang.String getPrice();
+    /**
+     * <code>optional string price = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getPriceBytes();
   }
   /**
    * Protobuf type {@code com.caletre.shop.model.Product}
@@ -96,6 +110,12 @@ public final class ProductOuterClass {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
               name_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              price_ = bs;
               break;
             }
           }
@@ -195,9 +215,52 @@ public final class ProductOuterClass {
       }
     }
 
+    public static final int PRICE_FIELD_NUMBER = 3;
+    private java.lang.Object price_;
+    /**
+     * <code>optional string price = 3;</code>
+     */
+    public boolean hasPrice() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional string price = 3;</code>
+     */
+    public java.lang.String getPrice() {
+      java.lang.Object ref = price_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          price_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string price = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPriceBytes() {
+      java.lang.Object ref = price_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        price_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       id_ = 0;
       name_ = "";
+      price_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -222,6 +285,9 @@ public final class ProductOuterClass {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeBytes(2, getNameBytes());
       }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, getPriceBytes());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -238,6 +304,10 @@ public final class ProductOuterClass {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, getNameBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getPriceBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -360,6 +430,8 @@ public final class ProductOuterClass {
         bitField0_ = (bitField0_ & ~0x00000001);
         name_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
+        price_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -396,6 +468,10 @@ public final class ProductOuterClass {
           to_bitField0_ |= 0x00000002;
         }
         result.name_ = name_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.price_ = price_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -418,6 +494,11 @@ public final class ProductOuterClass {
         if (other.hasName()) {
           bitField0_ |= 0x00000002;
           name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasPrice()) {
+          bitField0_ |= 0x00000004;
+          price_ = other.price_;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -559,6 +640,82 @@ public final class ProductOuterClass {
         return this;
       }
 
+      private java.lang.Object price_ = "";
+      /**
+       * <code>optional string price = 3;</code>
+       */
+      public boolean hasPrice() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string price = 3;</code>
+       */
+      public java.lang.String getPrice() {
+        java.lang.Object ref = price_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            price_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string price = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPriceBytes() {
+        java.lang.Object ref = price_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          price_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string price = 3;</code>
+       */
+      public Builder setPrice(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        price_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string price = 3;</code>
+       */
+      public Builder clearPrice() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        price_ = getDefaultInstance().getPrice();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string price = 3;</code>
+       */
+      public Builder setPriceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        price_ = value;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:com.caletre.shop.model.Product)
     }
 
@@ -585,8 +742,8 @@ public final class ProductOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\rproduct.proto\022\026com.caletre.shop.model\"" +
-      "#\n\007Product\022\n\n\002id\030\001 \002(\005\022\014\n\004name\030\002 \001(\tB\023B\021" +
-      "ProductOuterClass"
+      "2\n\007Product\022\n\n\002id\030\001 \002(\005\022\014\n\004name\030\002 \001(\t\022\r\n\005" +
+      "price\030\003 \001(\tB\023B\021ProductOuterClass"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -605,7 +762,7 @@ public final class ProductOuterClass {
     internal_static_com_caletre_shop_model_Product_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_caletre_shop_model_Product_descriptor,
-        new java.lang.String[] { "Id", "Name", });
+        new java.lang.String[] { "Id", "Name", "Price", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

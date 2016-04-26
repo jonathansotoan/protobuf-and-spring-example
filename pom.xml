@@ -65,6 +65,12 @@
             <artifactId>protobuf-java</artifactId>
             <version>2.6.1</version>
 		</dependency>
+        
+        <dependency>
+            <groupId>com.googlecode.protobuf-java-format</groupId>
+            <artifactId>protobuf-java-format</artifactId>
+            <version>1.2</version>
+        </dependency>
 	</dependencies>
 
 	<build>

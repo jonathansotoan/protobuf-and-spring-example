@@ -67,3 +67,7 @@ local.properties
 
 # ---- Maven ----
 .mvn
+target/
+
+# ---- Bower ----
+bower_components/

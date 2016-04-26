@@ -1,0 +1,9 @@
+package com.caletre.shop.model;
+
+option java_outer_classname = "ProductOuterClass";
+
+message Product {
+    required int32 id = 1;
+    optional string name = 2;
+    optional string price = 3;
+}
