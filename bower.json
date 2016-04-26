@@ -1,0 +1,26 @@
+{
+  "name": "shop",
+  "authors": [
+    "Jonathan Soto <jonathansoto.an@gmail.com>"
+  ],
+  "description": "Testing shop project with Protobuf",
+  "main": "",
+  "keywords": [
+    "protbuf",
+    "spring",
+    "example"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.5"
+  }
+}
