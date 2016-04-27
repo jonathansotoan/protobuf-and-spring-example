@@ -1,12 +1,12 @@
 (function() {
 	'use strict';
 	
-	angular.module('shop').controller('ProductListController', [
+	angular.module('shop').controller('ProductDetailsController', [
         '$http',
-        productListController
+        productDetailsController
     ]);
 	
-	function productListController($http) {
+	function productDetailsController($http) {
 		var self = this;
 		
 		self.jsonProduct = '';

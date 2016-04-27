@@ -7,3 +7,7 @@ message Product {
     optional string name = 2;
     optional string price = 3;
 }
+
+message ProductList {
+    repeated Product products = 1;
+}
